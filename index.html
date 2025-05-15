@@ -1,0 +1,1213 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erenildo Midas | Hipnoterapia Clínica, Coaching e Auriculoterapia</title>
+    <meta name="description" content="Especialista em desbloqueios emocionais, ansiedade, depressão e autoconhecimento. Atendimento online e presencial em Sertânia/PE.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --primary: #1a4b8c;
+            --secondary: #d4af37;
+            --accent: #6b8e23;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --text: #333333;
+            --text-light: #6c757d;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text);
+            line-height: 1.6;
+            background-color: #f5f5f5;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            color: var(--primary);
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            height: 50px;
+            margin-right: 10px;
+        }
+        
+        .logo-text h1 {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+            color: var(--primary);
+        }
+        
+        .logo-text p {
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 30px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 500;
+            transition: color 0.3s;
+            position: relative;
+        }
+        
+        nav ul li a:hover {
+            color: var(--secondary);
+        }
+        
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--secondary);
+            bottom: -5px;
+            left: 0;
+            transition: width 0.3s;
+        }
+        
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--primary);
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+            margin-top: 80px;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--secondary);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 500;
+            transition: all 0.3s;
+            border: 2px solid var(--secondary);
+        }
+        
+        .btn:hover {
+            background-color: transparent;
+            color: var(--secondary);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+            margin-left: 15px;
+        }
+        
+        .btn-outline:hover {
+            background-color: white;
+            color: var(--primary);
+        }
+        
+        /* About Section */
+        .section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 3px;
+            background-color: var(--secondary);
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .about-container {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+        
+        .about-img {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .about-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .about-content {
+            flex: 1;
+        }
+        
+        .about-content h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+        
+        .about-content p {
+            margin-bottom: 15px;
+            color: var(--text);
+        }
+        
+        .about-list {
+            margin-top: 30px;
+        }
+        
+        .about-list li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .about-list li i {
+            color: var(--secondary);
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+        
+        /* Services Section */
+        .services {
+            background-color: var(--light);
+        }
+        
+        .services-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .service-img {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .service-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .service-card:hover .service-img img {
+            transform: scale(1.1);
+        }
+        
+        .service-content {
+            padding: 25px;
+        }
+        
+        .service-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+        
+        .service-content p {
+            margin-bottom: 20px;
+            color: var(--text-light);
+        }
+        
+        .service-content a {
+            color: var(--secondary);
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+        }
+        
+        .service-content a i {
+            margin-left: 5px;
+            transition: transform 0.3s;
+        }
+        
+        .service-content a:hover i {
+            transform: translateX(5px);
+        }
+        
+        /* Program Section */
+        .program {
+            background: linear-gradient(rgba(26, 75, 140, 0.9), rgba(26, 75, 140, 0.9)), url('https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+        }
+        
+        .program .section-title h2 {
+            color: white;
+        }
+        
+        .program .section-title h2::after {
+            background-color: var(--secondary);
+        }
+        
+        .program-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .program-content h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        
+        .program-content p {
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+        
+        .program-benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+        
+        .benefit-card {
+            background-color: rgba(255,255,255,0.1);
+            padding: 30px 20px;
+            border-radius: 10px;
+            backdrop-filter: blur(5px);
+            transition: transform 0.3s;
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .benefit-card i {
+            font-size: 2.5rem;
+            color: var(--secondary);
+            margin-bottom: 20px;
+        }
+        
+        .benefit-card h4 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+        
+        /* Testimonials Section */
+        .testimonials {
+            background-color: var(--light);
+        }
+        
+        .testimonials-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .testimonial-slide {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            margin: 0 20px;
+            text-align: center;
+        }
+        
+        .testimonial-slide i {
+            font-size: 2rem;
+            color: var(--secondary);
+            margin-bottom: 20px;
+        }
+        
+        .testimonial-slide p {
+            font-style: italic;
+            margin-bottom: 20px;
+            color: var(--text);
+        }
+        
+        .testimonial-author {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .testimonial-author img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+        
+        .testimonial-author h4 {
+            font-size: 1.2rem;
+            color: var(--primary);
+        }
+        
+        .testimonial-author span {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+        
+        /* Blog Section */
+        .blog-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .blog-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .blog-img {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .blog-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .blog-card:hover .blog-img img {
+            transform: scale(1.1);
+        }
+        
+        .blog-content {
+            padding: 25px;
+        }
+        
+        .blog-date {
+            display: inline-block;
+            background-color: var(--secondary);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            margin-bottom: 15px;
+        }
+        
+        .blog-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+        
+        .blog-content p {
+            margin-bottom: 20px;
+            color: var(--text-light);
+        }
+        
+        .blog-content a {
+            color: var(--secondary);
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+        }
+        
+        .blog-content a i {
+            margin-left: 5px;
+            transition: transform 0.3s;
+        }
+        
+        .blog-content a:hover i {
+            transform: translateX(5px);
+        }
+        
+        /* Contact Section */
+        .contact {
+            background-color: var(--light);
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 50px;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .contact-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            color: var(--primary);
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+        }
+        
+        .contact-item i {
+            font-size: 1.5rem;
+            color: var(--secondary);
+            margin-right: 15px;
+            margin-top: 5px;
+        }
+        
+        .contact-text h4 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+            color: var(--primary);
+        }
+        
+        .contact-text p, .contact-text a {
+            color: var(--text);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .contact-text a:hover {
+            color: var(--secondary);
+        }
+        
+        .contact-social {
+            display: flex;
+            margin-top: 20px;
+        }
+        
+        .contact-social a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary);
+            color: white;
+            border-radius: 50%;
+            margin-right: 15px;
+            transition: all 0.3s;
+        }
+        
+        .contact-social a:hover {
+            background-color: var(--secondary);
+            transform: translateY(-5px);
+        }
+        
+        .contact-form {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .contact-form h3 {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            color: var(--primary);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--primary);
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: 'Poppins', sans-serif;
+            transition: border-color 0.3s;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            border-color: var(--secondary);
+            outline: none;
+        }
+        
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .submit-btn {
+            background-color: var(--secondary);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 1rem;
+        }
+        
+        .submit-btn:hover {
+            background-color: var(--primary);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--primary);
+            color: white;
+            padding: 60px 0 20px;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-col h4 {
+            font-size: 1.3rem;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-col h4::after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 2px;
+            background-color: var(--secondary);
+            bottom: 0;
+            left: 0;
+        }
+        
+        .footer-col p {
+            margin-bottom: 20px;
+            opacity: 0.8;
+        }
+        
+        .footer-links li {
+            margin-bottom: 15px;
+            list-style: none;
+        }
+        
+        .footer-links a {
+            color: white;
+            opacity: 0.8;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+        
+        .footer-links a:hover {
+            opacity: 1;
+            color: var(--secondary);
+            transform: translateX(5px);
+        }
+        
+        .footer-contact li {
+            margin-bottom: 15px;
+            list-style: none;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .footer-contact i {
+            margin-right: 10px;
+            color: var(--secondary);
+            margin-top: 5px;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .footer-bottom p {
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            .about-container {
+                flex-direction: column;
+            }
+            
+            .about-img, .about-content {
+                flex: none;
+                width: 100%;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+                position: absolute;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                flex-direction: column;
+                padding: 20px 0;
+                box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+                z-index: 999;
+            }
+            
+            nav ul.show {
+                display: flex;
+            }
+            
+            nav ul li {
+                margin: 0;
+                padding: 10px 20px;
+                border-bottom: 1px solid #eee;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .btn {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+            
+            .section {
+                padding: 60px 0;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .hero-btns {
+                display: flex;
+                flex-direction: column;
+            }
+            
+            .btn-outline {
+                margin-left: 0;
+                margin-top: 15px;
+            }
+            
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+            
+            .contact-form {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <img src="logo.png" alt="Erenildo Midas">
+                <div class="logo-text">
+                    <h1>Erenildo Midas</h1>
+                    <p>Hipnoterapia Clínica | Coaching | Auriculoterapia</p>
+                </div>
+            </div>
+            <nav>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul id="navMenu">
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#about">Sobre</a></li>
+                    <li><a href="#services">Serviços</a></li>
+                    <li><a href="#program">Programa</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Desbloqueie sua mente, liberte seu potencial</h1>
+            <p>Especialista em desbloqueios emocionais, ansiedade, depressão e autoconhecimento. Transforme sua vida com técnicas comprovadas de Hipnoterapia Clínica, Coaching e Auriculoterapia.</p>
+            <div class="hero-btns">
+                <a href="#contact" class="btn">Agendar Consulta</a>
+                <a href="#program" class="btn btn-outline">Conheça o Programa</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>Sobre Erenildo Midas</h2>
+            </div>
+            <div class="about-container">
+                <div class="about-img">
+                    <img src="erenildo-midas.jpg" alt="Erenildo Midas">
+                </div>
+                <div class="about-content">
+                    <h3>Hipnoterapeuta Clínico e Auriculoterapeuta</h3>
+                    <p>Com mais de 15 anos de experiência na área do desenvolvimento humano, Erenildo F. Silva, também conhecido como Erenildo Midas, é um profissional reconhecido por sua abordagem acolhedora, técnica e transformadora no campo da Hipnoterapia Clínica e Auriculoterapia.</p>
+                    <p>Sua missão é promover o equilíbrio emocional e a liberdade interior por meio de métodos seguros, eficazes e cientificamente embasados. A combinação entre Hipnoterapia e Auriculoterapia possibilita tratamentos profundos que integram mente, corpo e emoções — oferecendo resultados rápidos e duradouros.</p>
+                    <ul class="about-list">
+                        <li><i class="fas fa-check"></i> Especialista em desbloqueios emocionais e equilíbrio mental</li>
+                        <li><i class="fas fa-check"></i> Atendimento individualizado e humanizado</li>
+                        <li><i class="fas fa-check"></i> Protocolos baseados em evidências científicas</li>
+                        <li><i class="fas fa-check"></i> Atendimentos online e presenciais</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section services" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nossos Serviços</h2>
+            </div>
+            <div class="services-container">
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1585435557343-3b092031a831?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Hipnoterapia Clínica">
+                    </div>
+                    <div class="service-content">
+                        <h3>Hipnoterapia Clínica</h3>
+                        <p>Técnica que acessa o subconsciente para tratar ansiedade, depressão, traumas, fobias, vícios e promover mudanças comportamentais profundas.</p>
+                        <a href="#contact">Saiba mais <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Auriculoterapia">
+                    </div>
+                    <div class="service-content">
+                        <h3>Auriculoterapia</h3>
+                        <p>Terapia que estimula pontos específicos da orelha para aliviar dores físicas e emocionais, reduzir estresse e promover equilíbrio energético.</p>
+                        <a href="#contact">Saiba mais <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Coaching">
+                    </div>
+                    <div class="service-content">
+                        <h3>Coaching de Vida</h3>
+                        <p>Processo que ajuda a desenvolver autoconfiança, foco, prosperidade e autoestima, eliminando crenças limitantes e alcançando objetivos.</p>
+                        <a href="#contact">Saiba mais <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Program Section -->
+    <section class="section program" id="program">
+        <div class="container">
+            <div class="section-title">
+                <h2>Programa Exclusivo</h2>
+            </div>
+            <div class="program-content">
+                <h3>Desvendando os Códigos Secretos da Mente</h3>
+                <p>Programa revolucionário voltado para empresas e instituições que desejam melhorar a produtividade, motivação e saúde emocional de seus colaboradores. Focado em desbloquear crenças limitantes, desenvolver inteligência emocional e criar ambientes mais humanos e saudáveis.</p>
+                <div class="program-benefits">
+                    <div class="benefit-card">
+                        <i class="fas fa-brain"></i>
+                        <h4>Desbloqueio Mental</h4>
+                        <p>Liberte seus colaboradores de crenças limitantes que impedem o crescimento profissional e pessoal.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <i class="fas fa-chart-line"></i>
+                        <h4>Aumento de Produtividade</h4>
+                        <p>Técnicas comprovadas para melhorar o foco, eficiência e resultados da equipe.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <i class="fas fa-heart"></i>
+                        <h4>Saúde Emocional</h4>
+                        <p>Redução de estresse, ansiedade e conflitos no ambiente de trabalho.</p>
+                    </div>
+                </div>
+                <a href="#contact" class="btn">Quero saber mais sobre o programa</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>Depoimentos</h2>
+            </div>
+            <div class="testimonials-container">
+                <div class="testimonial-slide">
+                    <i class="fas fa-quote-left"></i>
+                    <p>"Após apenas 3 sessões com o Erenildo, minha ansiedade reduziu significativamente. Hoje consigo dormir melhor e enfrentar desafios que antes me paralisavam. A Hipnoterapia mudou minha vida!"</p>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Cliente">
+                        <h4>Ana Lúcia</h4>
+                        <span>Paciente - Ansiedade</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="section" id="blog">
+        <div class="container">
+            <div class="section-title">
+                <h2>Conhecimento que Transforma</h2>
+            </div>
+            <div class="blog-container">
+                <div class="blog-card">
+                    <div class="blog-img">
+                        <img src="https://images.unsplash.com/photo-1593810450967-f9c42742e326?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Hipnose">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-date">Hipnoterapia</span>
+                        <h3>Como a Hipnose Pode Ajudar no Tratamento da Ansiedade</h3>
+                        <p>Descubra os mecanismos pelos quais a hipnoterapia atua no controle da ansiedade e promove maior equilíbrio emocional.</p>
+                        <a href="#">Ler mais <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <div class="blog-img">
+                        <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Autoconhecimento">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-date">Autoconhecimento</span>
+                        <h3>5 Passos para Desenvolver Autoconhecimento e Transformar sua Vida</h3>
+                        <p>Técnicas práticas para se conhecer melhor e tomar decisões mais alinhadas com seus valores e propósitos.</p>
+                        <a href="#">Ler mais <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <div class="blog-img">
+                        <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Auriculoterapia">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-date">Auriculoterapia</span>
+                        <h3>Auriculoterapia: O Poder Terapêutico nos Pontos da Orelha</h3>
+                        <p>Conheça como essa técnica milenar pode auxiliar no tratamento de dores físicas e desequilíbrios emocionais.</p>
+                        <a href="#">Ler mais <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Entre em Contato</h2>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Agende sua Consulta</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="contact-text">
+                            <h4>Endereço</h4>
+                            <p>Rua do Comércio, 21, Povoado de Moderna<br>Sertânia, Pernambuco, PE<br>CEP: 56600-972</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div class="contact-text">
+                            <h4>Telefone</h4>
+                            <a href="tel:+5581997264975">(81) 99726-4975</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div class="contact-text">
+                            <h4>E-mail</h4>
+                            <a href="mailto:erenildomidas.coach@gmail.com">erenildomidas.coach@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div class="contact-text">
+                            <h4>Horário de Atendimento</h4>
+                            <p>Segunda a Sexta: 8h às 18h<br>Sábado: 8h às 12h</p>
+                        </div>
+                    </div>
+                    <div class="contact-social">
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Envie sua Mensagem</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Nome Completo</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Telefone</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Serviço de Interesse</label>
+                            <select id="service" name="service">
+                                <option value="">Selecione um serviço</option>
+                                <option value="hipnoterapia">Hipnoterapia Clínica</option>
+                                <option value="auriculoterapia">Auriculoterapia</option>
+                                <option value="coaching">Coaching</option>
+                                <option value="programa">Programa Empresarial</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensagem</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Enviar Mensagem</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <div class="logo">
+                        <img src="logo.png" alt="Erenildo Midas" style="height: 40px;">
+                        <div class="logo-text">
+                            <h1 style="color: white; font-size: 1.2rem;">Erenildo Midas</h1>
+                        </div>
+                    </div>
+                    <p>Especialista em desbloqueios emocionais, ansiedade, depressão e autoconhecimento. Atendimento online e presencial em Sertânia/PE.</p>
+                    <p>O poder de mudar está em você. Eu posso te ajudar a acessá-lo.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Links Rápidos</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Início</a></li>
+                        <li><a href="#about">Sobre</a></li>
+                        <li><a href="#services">Serviços</a></li>
+                        <li><a href="#program">Programa</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#contact">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Serviços</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Hipnoterapia Clínica</a></li>
+                        <li><a href="#">Auriculoterapia</a></li>
+                        <li><a href="#">Coaching de Vida</a></li>
+                        <li><a href="#">Programa Empresarial</a></li>
+                        <li><a href="#">Palestras e Workshops</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contato</h4>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Rua do Comércio, 21, Povoado de Moderna, Sertânia/PE</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <span>(81) 99726-4975</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>erenildomidas.coach@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Erenildo Midas - Todos os direitos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navMenu = document.getElementById('navMenu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('show');
+            mobileMenuBtn.innerHTML = navMenu.classList.contains('show') ? 
+                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Smooth Scrolling for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                if (navMenu.classList.contains('show')) {
+                    navMenu.classList.remove('show');
+                    mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                }
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Sticky Header on Scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            header.classList.toggle('sticky', window.scrollY > 0);
+        });
+    </script>
+</body>
+</html>
